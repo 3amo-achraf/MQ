@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure checkout for MQ luxury watches with premium shipping, payment, and order confirmation.">
+  <meta name="keywords" content="MQ checkout, luxury watch checkout, secure payment, premium timepieces purchase">
+  <title>Checkout | MQ Luxury Watches</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand-logo" href="index.html">MQ</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-action" href="wishlist.html">Wishlist <span id="wish-count">0</span></a>
+        <a class="nav-action" href="cart.html">Cart <span id="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="section">
+      <div class="section-title"><span></span><h2>Secure Checkout</h2></div>
+      <div class="grid grid-2" style="gap: 2.5rem;">
+        <div class="card" style="padding: 2rem;">
+          <h3 style="font-family: Georgia, 'Times New Roman', serif;">Shipping Details</h3>
+          <form style="display: grid; gap: 1rem; margin-top: 1.25rem;">
+            <input type="text" placeholder="Full name" style="width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+            <input type="email" placeholder="Email address" style="width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+            <input type="text" placeholder="Street address" style="width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+            <input type="text" placeholder="City, State, ZIP" style="width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+            <input type="text" placeholder="Country" style="width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+          </form>
+        </div>
+        <div class="card" style="padding: 2rem;">
+          <h3 style="font-family: Georgia, 'Times New Roman', serif;">Order Summary</h3>
+          <div style="margin-top: 1.5rem; display: grid; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; color: var(--muted);">
+              <span>MQ Luxe Chronograph</span>
+              <span>$16,800</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: var(--muted);">
+              <span>Shipping</span>
+              <span>$0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem;">
+              <span>Total</span>
+              <span>$16,800</span>
+            </div>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 1.75rem;">Place Order</button>
+          <p style="margin-top: 1rem; color: var(--muted); line-height: 1.8;">Your payment is secure and protected by advanced transaction security designed for premium purchases.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container footer">
+    <p>MQ checkout is crafted to support an effortless luxury purchase.</p>
+    <small>© 2026 MQ.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
