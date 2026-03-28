@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-content",
+      "settings": {
+        "heading": "Page"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

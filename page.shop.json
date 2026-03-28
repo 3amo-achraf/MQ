@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-content",
+      "settings": {
+        "heading": "Shop the Collection"
+      }
+    },
+    "featured_products": {
+      "type": "featured-products"
+    }
+  },
+  "order": [
+    "main",
+    "featured_products"
+  ]
+}

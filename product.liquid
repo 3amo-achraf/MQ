@@ -1,0 +1,87 @@
+<main class="container">
+  <section class="section">
+    <div class="grid grid-2" style="align-items: start; gap: 3rem;">
+      <div class="card-hero" style="background-image: url('{{ product.featured_image | img_url: '1600x' }}'); min-height: 560px; background-size: cover; background-position: center;"></div>
+      <div>
+        <span class="flag">{{ product.vendor }}</span>
+        <h2 style="font-family: Georgia, 'Times New Roman', serif; font-size: 3rem; margin: 1rem 0;">{{ product.title }}</h2>
+        <p style="color: var(--muted); line-height: 1.9; font-size: 1.05rem;">{{ product.description | strip_html | truncate: 180 }}</p>
+        <div style="display: flex; align-items: baseline; gap: 1rem; margin: 1.75rem 0;">
+          <span style="font-size: 2rem; font-weight: 700;">{{ product.price | money }}</span>
+          <small style="color: var(--muted);">In stock · Limited release</small>
+        </div>
+
+        <form method="post" action="/cart/add" style="display: grid; gap: 1rem;">
+          {% if product.variants.size > 1 %}
+            <label>
+              <span style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold); font-size: 0.8rem;">Select variant</span>
+              <select name="id" style="width: 100%; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); background: transparent; color: var(--text); padding: 1rem;">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}">{{ variant.title }} — {{ variant.price | money }}</option>
+                {% endfor %}
+              </select>
+            </label>
+          {% else %}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          {% endif %}
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn-primary" type="submit">Add to Cart</button>
+            <a class="btn-secondary" href="/checkout">Buy Now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><span></span><h2>Details</h2></div>
+    <div class="grid grid-2">
+      <div class="highlight-card">
+        <h3>Materials</h3>
+        <p>42mm stainless steel case with black DLC coating, anti-reflective sapphire crystal, soft Italian leather strap, and solid gold accents.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Movement</h3>
+        <p>Automatic caliber with 72-hour power reserve, precision chronograph module, and accuracy tuned for everyday wear.</p>
+      </div>
+    </div>
+    <div class="grid grid-2" style="margin-top: 1.75rem;">
+      <div class="highlight-card">
+        <h3>Water Resistance</h3>
+        <p>Water resistant up to 50 meters, engineered for polished durability in daily environments.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Finish</h3>
+        <p>Hand-brushed case surfaces, polished bevels, and applied indexes with subtle luminescent material.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><span></span><h2>Specifications</h2></div>
+    <div class="card">
+      <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; color: var(--muted);">
+        <li><strong style="color: var(--text);">Case diameter:</strong> 42 mm</li>
+        <li><strong style="color: var(--text);">Crystal:</strong> Sapphire crystal with anti-reflective coating</li>
+        <li><strong style="color: var(--text);">Movement:</strong> Automatic chronograph caliber</li>
+        <li><strong style="color: var(--text);">Power reserve:</strong> 72 hours</li>
+        <li><strong style="color: var(--text);">Water resistance:</strong> 50 meters</li>
+        <li><strong style="color: var(--text);">Strap width:</strong> 22 mm</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><span></span><h2>Shipping & Returns</h2></div>
+    <div class="grid grid-2">
+      <div class="highlight-card">
+        <h3>Secure worldwide delivery</h3>
+        <p>Complimentary insured shipping and discreet packaging with carrier-tracked delivery.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Luxury return policy</h3>
+        <p>30-day returns on unworn timepieces with full concierge support for exchanges and care guidance.</p>
+      </div>
+    </div>
+  </section>
+</main>
